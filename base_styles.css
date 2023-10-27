@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(6, 32, 58);
+}
+table{
+    background-color: white;
+    text-align: center;
+}
+
+.topheader {
+    /* add a large top header with the title */
+    overflow: hidden;
+    font-size: large;
+    color: white;
+    text-align: center;
+}
