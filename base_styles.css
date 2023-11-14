@@ -30,5 +30,10 @@ table {
     white-space: nowrap;
     text-overflow: ellipsis; /* Ellipsis to hide or truncate text */
     border: 1px solid #ddd; /* Optional: Add borders to cells */
-    color:transparent;
+    /* color:transparent; */
   }
+
+.bigtext{
+    color: white;
+    text-align: center;
+}

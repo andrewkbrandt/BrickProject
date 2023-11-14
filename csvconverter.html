@@ -5,7 +5,8 @@
     <title>CSV to HTML</title>
 </head>
 <body>
-    <h1>CSV Data</h1>
+    <h1 class="bigtext">Czech-Out-A-Brick</h1>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
     <div id="csv-table">
         <!-- The generated HTML table will be inserted here -->
     </div>
@@ -17,7 +18,7 @@
 
         // Function to convert CSV to HTML table
         function csvToHtml(csv) {
-            var html = '<table dir="ltr" border="1" cellspacing="0" cellpadding="0">';
+            var html = '<table dir="ltr" border="1" cellspacing="0" cellpadding="0" id="myTable">';
             var lines = csv.split("\n");
                 
             lines.forEach(function (line) {
@@ -51,6 +52,40 @@
 
         // Call the function to load the CSV file
         loadCSV();
+    </script>
+
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, j, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+
+        for (j = 0; j < td.length; j++) {
+            if (td[j]){
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != ''){
+                    td[j].style.backgroundColor = "yellow";
+
+                }else{
+                     td[j].style.backgroundColor = "white";
+                 }
+            }
+        }
+
+        // if (td) {
+        //   txtValue = td.textContent || td.innerText;
+        //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //     tr[i].style.display = "";
+        //   } else {
+        //     tr[i].style.display = "none";
+        //   }
+        // }       
+      }
+    }
     </script>
 </body>
 </html>
