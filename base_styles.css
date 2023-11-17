@@ -37,3 +37,7 @@ table {
     color: white;
     text-align: center;
 }
+
+.searchbar{
+    align-items: baseline;
+}
