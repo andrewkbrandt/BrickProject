@@ -11,10 +11,12 @@ function myFunction() {
             if (td[j]){
                 txtValue = td[j].textContent || td[j].innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != ''){
-                    td[j].style.backgroundColor = "yellow";
+                    // td[j].style.backgroundColor = "yellow";
+                    td[j].classList.add("highlight")
 
                 }else{
-                    td[j].style.backgroundColor = "white";
+                    // td[j].style.backgroundColor != "yellow";
+                    td[j].classList.remove("highlight")
                 }
             }
         }

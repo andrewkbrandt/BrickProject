@@ -10,7 +10,16 @@ function csvToHtml(csv) {
         html += "<tr>";
         var cells = line.split(",");
         cells.forEach(function (cell) {
-            html += "<td>" + cell + "</td>";
+            // put a check here for lamp.
+            // also need to check for a space?
+            if (cell.includes("lamp") || cell=="lamp  "){
+                html += '<td class="lamp">' + cell + '</td>';
+            } else if (cell.length==0 || cell=="\r"){
+                html += '<td class="extraspace">' + cell + '</td>';
+            }else{
+                html += '<td>' + cell + '</td>';
+            }
+            // html += '<td>' + cell + '</td>';
         });
         html += "</tr>";
     });

@@ -25,11 +25,9 @@ function customCsvToDictionary(file_path, callback) {
         });
 }
 
-// Replace 'donors.csv' with your CSV file path
 const csvFilePath = 'donors.csv';
 
 customCsvToDictionary(csvFilePath, (resultDict) => {
     console.log(resultDict);
-    // Now you have a dictionary-like object where keys are from the 'Brick Number' column in the CSV file
-    // and values are objects containing the cleaned 'Brick' content and 'Last Name'
+    //dictionary object
 });

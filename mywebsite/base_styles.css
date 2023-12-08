@@ -30,8 +30,15 @@ table {
     white-space: nowrap;
     text-overflow: ellipsis; /* Ellipsis to hide or truncate text */
     border: 1px solid #ddd; /* Optional: Add borders to cells */
-    /* color:transparent; */
+    color:transparent;
+    background-color: rgb(193, 132, 108);
   }
+  td:empty{
+    background-color: white;
+  }
+  /* td[value=" "]{
+    background-color: white;
+  } */
 
 .bigtext{
     color: white;
@@ -40,4 +47,14 @@ table {
 
 .searchbar{
     align-items: baseline;
+}
+
+.highlight{
+  background-color: yellow;
+}
+.lamp{
+  background-color: black;
+}
+.extraspace{
+  background-color: white;
 }
