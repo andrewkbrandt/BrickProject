@@ -1,5 +1,7 @@
 body{
-    background-color: rgb(6, 32, 58);
+    background-color: rgb(255, 255, 255);
+    margin:0;
+    padding: 0;
 }
 /* table{
     background-color: white;
@@ -10,7 +12,7 @@ body{
     /* add a large top header with the title */
     overflow: hidden;
     font-size: large;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -20,6 +22,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
+    border: none;
     background-color: white;
   }
   
@@ -41,7 +44,7 @@ table {
   } */
 
 .bigtext{
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -53,8 +56,24 @@ table {
   background-color: yellow;
 }
 .lamp{
+  border: none;
   background-color: black;
 }
 .extraspace{
   background-color: white;
+  border: none;
+}
+
+
+
+#footer{
+  position: absolute; 
+  text-align: center;
+  vertical-align: center;
+  /* bottom: 0; */
+  width:100%;
+  /* margin: 1; */
+  padding:1;
+  height: 5rem;   
+  background-color: lightgray;         
 }

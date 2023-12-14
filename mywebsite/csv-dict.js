@@ -10,11 +10,9 @@ function customCsvToDictionary(file_path, callback) {
             const key = row['Brick Number'];
             const brick = row['Brick'];
             const lastName = row['Last Name - Search Word'];
-            
-            // Clean the multi-line content in the 'Brick' column
+
             const brickCleaned = brick.replace(/\n/g, ' ').trim();
-            
-            // Store the cleaned data in the dictionary
+
             dataDictionary[key] = {
                 'Brick': brickCleaned,
                 'Last Name': lastName
@@ -25,9 +23,13 @@ function customCsvToDictionary(file_path, callback) {
         });
 }
 
-const csvFilePath = 'donors.csv';
+const path = require('path');
+const csvFilePath = path.join(__dirname, 'donors.csv');
+
 
 customCsvToDictionary(csvFilePath, (resultDict) => {
-    console.log(resultDict);
-    //dictionary object
+    
+    module.exports = { resultDict }; // Exporting the resultDict
 });
+
+// donors = resultDict;

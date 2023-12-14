@@ -11,7 +11,7 @@ function csvToHtml(csv) {
         var cells = line.split(",");
         cells.forEach(function (cell) {
             // put a check here for lamp.
-            // also need to check for a space?
+            // also need to check for a space
             if (cell.includes("lamp") || cell=="lamp  "){
                 html += '<td class="lamp">' + cell + '</td>';
             } else if (cell.length==0 || cell=="\r"){

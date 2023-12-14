@@ -1,5 +1,6 @@
-function myFunction() {
-    var input, filter, table, tr, td, i, j, txtValue;
+
+function SearchBrick() {
+    var input, filter, table, tr, td, i, j, txtValue, test;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     table = document.getElementById("myTable");
@@ -11,11 +12,11 @@ function myFunction() {
             if (td[j]){
                 txtValue = td[j].textContent || td[j].innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != ''){
-                    // td[j].style.backgroundColor = "yellow";
+                    //show the cell
                     td[j].classList.add("highlight")
 
                 }else{
-                    // td[j].style.backgroundColor != "yellow";
+                    //hide again
                     td[j].classList.remove("highlight")
                 }
             }
